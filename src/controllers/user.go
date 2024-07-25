@@ -57,6 +57,12 @@ func (u UserService) CreateUser(ctx context.Context, r *http.Request) (models.Re
 		return models.Response{Message: "Error creating user", Success: false, Error: err.Error()}, err
 	}
 
+	isSent := u.SendEmail(*userInput)
+
+	if !isSent {
+		return models.Response{Message: "Error sending email", Success: false}, nil
+	}
+
 	return models.Response{Message: "User created successfully", Data: userID, Success: true}, nil
 
 }
