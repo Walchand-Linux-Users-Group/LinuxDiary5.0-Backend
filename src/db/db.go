@@ -124,3 +124,22 @@ func (d DbAdapter) GetUserByTransactionId(ctx context.Context, transactionId str
 	}
 	return user, nil
 }
+
+func (d DbAdapter) GetUsers(ctx context.Context) ([]models.User, error) {
+	var users []models.User
+	ctx, cancel := context.WithTimeout(ctx, 10*time.Second)
+	defer cancel()
+
+	cursor, err := d.Db.Collection("users").Find(ctx, bson.D{})
+	if err != nil {
+		slog.Error("Error getting users", err)
+		return users, err
+	}
+	defer cursor.Close(ctx)
+	for cursor.Next(ctx) {
+		var user models.User
+		cursor.Decode(&user)
+		users = append(users, user)
+	}
+	return users, nil
+}

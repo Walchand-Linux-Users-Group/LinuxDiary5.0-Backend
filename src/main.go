@@ -52,6 +52,27 @@ func main() {
 		w.Write(jsonResponse)
 	}).Methods("POST")
 
+	muxRouter.HandleFunc("/admin/getReferralLeaderboard", func(w http.ResponseWriter, r *http.Request) {
+		password := r.Header.Get("Authorization")
+		if password != os.Getenv("ADMIN_PASSWORD") {
+			http.Error(w, "Unauthorized", http.StatusUnauthorized)
+			return
+		}
+
+		response, _ := userService.GetReferralLeaderboard(context.Background(), r)
+
+		jsonResponse, err := json.Marshal(response)
+		log.Println(response)
+
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(jsonResponse)
+	})
+
 	corsOptions := cors.New(
 		cors.Options{
 			AllowedOrigins:   []string{"**", "*"},

@@ -35,3 +35,8 @@ type Response struct {
 	Success bool   `json:"success"`
 	Error   string `json:"error"`
 }
+
+type ReferralScore struct {
+	ReferralCode string `json:"referralCode" bson:"referralCode"`
+	Score        int    `json:"score" bson:"score"`
+}

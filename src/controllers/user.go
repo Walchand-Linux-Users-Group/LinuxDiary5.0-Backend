@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/smtp"
 	"os"
+	"sort"
 
 	"github.com/cloudinary/cloudinary-go/v2"
 	"github.com/cloudinary/cloudinary-go/v2/api/uploader"
@@ -483,4 +484,31 @@ func (u UserService) FileUpload(ctx context.Context, file multipart.File) (strin
 
 	return uploadResult.SecureURL, true
 
+}
+
+func (u UserService) GetReferralLeaderboard(ctx context.Context, r *http.Request) ([]models.ReferralScore, error) {
+	users, err := u.DbAdapter.GetUsers(ctx)
+
+	leaderboard := make(map[string]int)
+
+	if err != nil {
+		return nil, err
+	}
+
+	for _, user := range users {
+		if user.ReferralCode != "" {
+			leaderboard[user.ReferralCode]++
+		}
+	}
+
+	var leaderboardArr []models.ReferralScore
+
+	for key, value := range leaderboard {
+		leaderboardArr = append(leaderboardArr, models.ReferralScore{ReferralCode: key, Score: value})
+	}
+
+	sort.Slice(leaderboardArr, func(i, j int) bool {
+		return leaderboardArr[i].Score > leaderboardArr[j].Score
+	})
+	return leaderboardArr, nil
 }
