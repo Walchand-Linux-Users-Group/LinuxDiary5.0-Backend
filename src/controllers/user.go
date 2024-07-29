@@ -80,7 +80,7 @@ func (u UserService) SendEmail(user models.UserInput) bool {
 
 	emailTemplate := u.GetEmail(user.Name)
 
-	msg := []byte("To: " + to + "\r\n" +
+	msg := []byte("From: " + from + "\r\n" + "To: " + to + "\r\n" +
 		"Subject: Welcome to LinuxDiary 5.0\r\n" +
 		"MIME-Version: 1.0\r\n" +
 		"Content-Type: text/html; charset=UTF-8\r\n\r\n" +
