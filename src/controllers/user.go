@@ -4,6 +4,7 @@ import (
 	"backend/src/db"
 	"backend/src/models"
 	"context"
+	"fmt"
 	"log"
 	"mime/multipart"
 	"net/http"
@@ -58,12 +59,14 @@ func (u UserService) CreateUser(ctx context.Context, r *http.Request) (models.Re
 		return models.Response{Message: "Error creating user", Success: false, Error: err.Error()}, err
 	}
 
-	isSent := u.SendEmail(*userInput)
-
-	if !isSent {
-		return models.Response{Message: "Error sending email", Success: false}, nil
-	}
-
+	go func() {
+		isSent := u.SendEmail(*userInput)
+		if !isSent {
+			fmt.Println("Failed to send email:", err)
+		} else {
+			fmt.Println("Email sent successfully to")
+		}
+	}()
 	return models.Response{Message: "User created successfully", Data: userID, Success: true}, nil
 
 }
