@@ -164,6 +164,29 @@ func (u UserService) GetEmail(name string) string {
       rel="stylesheet"
     />
     <title>LinuxDiary 4.0</title>
+
+    <!-- <title>Responsive GIF Display</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .gif-container {
+            max-width: 600;
+            overflow: hidden;
+        }
+        img {
+            width: 600;
+            display: block;
+        }
+        
+    </style> -->
   </head>
 
   <body style="font-family: 'Poppins', sans-serif">
@@ -203,20 +226,22 @@ func (u UserService) GetEmail(name string) string {
               </tr>
             </tbody>
           </table>
-
-          <!-- <img
+          
+          <!-- <div class="gif-container"> -->
+          <img
             style="text-align: center"
             alt="LinuxDiary 5.0 Banner"
-            src="https://cdn.discordapp.com/attachments/1249775253564166264/1268443684333158482/2.mp4?ex=66ac71bc&is=66ab203c&hm=d0f9a7293ad4609738cc61bbc659f3a0b7a9d592d90ccb708c8e79bf6e7696d5&"
+            src="https://cdn.discordapp.com/attachments/1249775253564166264/1268452289228570755/Banner_1.gif?ex=66ac79c0&is=66ab2840&hm=1f164958380a62ff73017d15afccbbe5c5b31efeb05c9df608aa43f11802d01d&"
             width="600"
             class="CToWUd a6T"
             data-bit="iit"
             tabindex="0"
-          /> -->
-          <video width="600" autoplay loop muted>
+          />
+        <!-- </div> -->
+          <!-- <video width="600" autoplay loop muted>
             <source src="https://cdn.discordapp.com/attachments/1249775253564166264/1268443684333158482/2.mp4?ex=66ac71bc&is=66ab203c&hm=d0f9a7293ad4609738cc61bbc659f3a0b7a9d592d90ccb708c8e79bf6e7696d5&" type="video/mp4">
             Your browser does not support the video tag.
-          </video>
+          </video> -->
           
           
           <div
@@ -296,7 +321,7 @@ func (u UserService) GetEmail(name string) string {
                   <p>
                     Details of the event are as follows: <br />
                     <strong>Date:</strong> 10th & 11th of August 2024 <br />
-                    <strong>Time:</strong> 9 AM <br />
+                    <strong>Time:</strong> 9:00 AM <br />
                     <strong>Venue:</strong>
                     Main & Mini CCF, WCE
                   </p>
@@ -334,101 +359,101 @@ func (u UserService) GetEmail(name string) string {
             </tbody>
           </table>
 
-          <table
-            align="center"
-            style="
-              text-align: center;
-              vertical-align: top;
-              width: 600px;
-              max-width: 600px;
-              background-color: #ffffff;
-            "
-            width="600"
-          >
-            <tbody>
-              <tr>
-                <td
+        <table
+          align="center"
+          style="
+            text-align: center;
+            vertical-align: top;
+            width: 600px;
+            max-width: 600px;
+            background-color: #ffffff;
+          "
+          width="600"
+        >
+          <tbody>
+            <tr>
+              <td
+                style="
+                  width: 600px;
+                  vertical-align: top;
+                  padding-left: 0;
+                  padding-right: 0;
+                "
+              >
+                <img
                   style="
-                    width: 596px;
-                    vertical-align: top;
-                    padding-left: 0;
-                    padding-right: 0;
+                    text-align: center;
+                    border-top-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    margin-bottom: 5px;
                   "
-                >
-                  <img
-                    style="
-                      text-align: center;
-                      border-top-left-radius: 30px;
-                      border-bottom-right-radius: 30px;
-                      margin-bottom: 5px;
-                    "
-                    alt="Logo"
-                    src="https://res.cloudinary.com/dduur8qoo/image/upload/v1689771850/wlug_white_logo_page-0001_u8efnh.jpg"
-                    align="center"
-                    width="200"
-                    height="120"
+                  alt="Logo"
+                  src="https://res.cloudinary.com/dduur8qoo/image/upload/v1689771850/wlug_white_logo_page-0001_u8efnh.jpg"
+                  align="center"
+                  width="200"
+                  height="120"
+                  class="CToWUd"
+                  data-bit="iit"
+                />
+              </td>
+            </tr>
+
+            <tr style="margin-bottom: 30px" align="center">
+              <td align="center">
+                <a
+                  href="https://www.instagram.com/wcewlug/"
+                  target="_blank"
+                  data-saferedirecturl="https://www.google.com/url?q=https://www.instagram.com/wcewlug/&amp;source=gmail&amp;ust=1680976985984000&amp;usg=AOvVaw16ObtJOZ1hpw9644RZ4oMM"
+                  style="margin: 0 12px"
+                  ><img
+                    src="https://res.cloudinary.com/dduur8qoo/image/upload/v1689773467/Instagram_vn7dni_kzulby.png"
                     class="CToWUd"
                     data-bit="iit"
-                  />
-                </td>
-              </tr>
-
-              <tr style="margin-bottom: 30px" align="center">
-                <td align="center">
-                  <a
-                    href="https://www.instagram.com/wcewlug/"
-                    target="_blank"
-                    data-saferedirecturl="https://www.google.com/url?q=https://www.instagram.com/wcewlug/&amp;source=gmail&amp;ust=1680976985984000&amp;usg=AOvVaw16ObtJOZ1hpw9644RZ4oMM"
-                    style="margin: 0 12px"
-                    ><img
-                      src="https://res.cloudinary.com/dduur8qoo/image/upload/v1689773467/Instagram_vn7dni_kzulby.png"
-                      class="CToWUd"
-                      data-bit="iit"
-                      height="30"
-                      width="30"
-                  /></a>
-                  <a
-                    href="https://twitter.com/wcewlug"
-                    target="_blank"
-                    data-saferedirecturl="https://www.google.com/url?q=https://twitter.com/wcewlug&amp;source=gmail&amp;ust=1680976985984000&amp;usg=AOvVaw1ypHRKREADjq_cn0IRD2po"
-                    ><img
-                      src="https://res.cloudinary.com/dduur8qoo/image/upload/v1689772239/twitter-icon-square-logo-108D17D373-seeklogo.com_tjkqmo.png"
-                      class="CToWUd"
-                      data-bit="iit"
-                      height="30"
-                      width="30"
-                      style="border-radius: 5px"
-                  /></a>
-                  <a
-                    href="https://linkedin.com/company/wlug-club"
-                    target="_blank"
-                    data-saferedirecturl="https://www.google.com/url?q=https://linkedin.com/company/wlug-club&amp;source=gmail&amp;ust=1680976985984000&amp;usg=AOvVaw0TDo2Akq1O-un9s_gRi70t"
-                    style="margin: 0 10px"
-                    ><img
-                      src="https://res.cloudinary.com/dduur8qoo/image/upload/v1685247353/linkedin_mg2ujv.png"
-                      class="CToWUd"
-                      data-bit="iit"
-                      height="30"
-                      width="30"
-                      style="border-radius: 5px"
-                  /></a>
-                  <a
-                    href="http://discord.wcewlug.org/join"
-                    target="_blank"
-                    data-saferedirecturl="https://www.google.com/url?q=http://discord.wcewlug.org/join&amp;source=gmail&amp;ust=1680976985984000&amp;usg=AOvVaw3PNiAyDSeiO1V36KVKeLZl"
-                    style="margin: 0 1px"
-                    ><img
-                      src="https://res.cloudinary.com/dduur8qoo/image/upload/v1689771996/unnamed_m7lgs0.png"
-                      class="CToWUd"
-                      data-bit="iit"
-                      height="30"
-                      width="30"
-                      style="border-radius: 5px"
-                  /></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                    height="30"
+                    width="30"
+                /></a>
+                <a
+                  href="https://twitter.com/wcewlug"
+                  target="_blank"
+                  data-saferedirecturl="https://www.google.com/url?q=https://twitter.com/wcewlug&amp;source=gmail&amp;ust=1680976985984000&amp;usg=AOvVaw1ypHRKREADjq_cn0IRD2po"
+                  ><img
+                    src="https://res.cloudinary.com/dduur8qoo/image/upload/v1689772239/twitter-icon-square-logo-108D17D373-seeklogo.com_tjkqmo.png"
+                    class="CToWUd"
+                    data-bit="iit"
+                    height="30"
+                    width="30"
+                    style="border-radius: 5px"
+                /></a>
+                <a
+                  href="https://linkedin.com/company/wlug-club"
+                  target="_blank"
+                  data-saferedirecturl="https://www.google.com/url?q=https://linkedin.com/company/wlug-club&amp;source=gmail&amp;ust=1680976985984000&amp;usg=AOvVaw0TDo2Akq1O-un9s_gRi70t"
+                  style="margin: 0 10px"
+                  ><img
+                    src="https://res.cloudinary.com/dduur8qoo/image/upload/v1685247353/linkedin_mg2ujv.png"
+                    class="CToWUd"
+                    data-bit="iit"
+                    height="30"
+                    width="30"
+                    style="border-radius: 5px"
+                /></a>
+                <a
+                  href="http://discord.wcewlug.org/join"
+                  target="_blank"
+                  data-saferedirecturl="https://www.google.com/url?q=http://discord.wcewlug.org/join&amp;source=gmail&amp;ust=1680976985984000&amp;usg=AOvVaw3PNiAyDSeiO1V36KVKeLZl"
+                  style="margin: 0 1px"
+                  ><img
+                    src="https://res.cloudinary.com/dduur8qoo/image/upload/v1689771996/unnamed_m7lgs0.png"
+                    class="CToWUd"
+                    data-bit="iit"
+                    height="30"
+                    width="30"
+                    style="border-radius: 5px"
+                /></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
           <div class="yj6qo"></div>
           <div class="adL"></div>
         </div>
