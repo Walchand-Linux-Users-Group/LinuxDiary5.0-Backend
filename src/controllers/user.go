@@ -11,6 +11,7 @@ import (
 	"net/smtp"
 	"os"
 	"sort"
+	"strings"
 
 	"github.com/cloudinary/cloudinary-go/v2"
 	"github.com/cloudinary/cloudinary-go/v2/api/uploader"
@@ -538,7 +539,7 @@ func (u UserService) GetReferralLeaderboard(ctx context.Context, r *http.Request
 
 	for _, user := range users {
 		if user.ReferralCode != "" {
-			leaderboard[user.ReferralCode]++
+			leaderboard[strings.TrimSpace(user.ReferralCode)]++
 		}
 	}
 
