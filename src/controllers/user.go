@@ -539,7 +539,7 @@ func (u UserService) GetReferralLeaderboard(ctx context.Context, r *http.Request
 
 	for _, user := range users {
 		if user.ReferralCode != "" {
-			leaderboard[strings.TrimSpace(user.ReferralCode)]++
+			leaderboard[strings.ToLower(strings.TrimSpace(user.ReferralCode))]++
 		}
 	}
 
